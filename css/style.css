@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background: #FAAB4E;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 白色卡片 */
+.card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 24px 32px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 柯基圖片：100*100 + 陰影 + 卡片頂部 40px 間距 */
+.corgi-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+/* 標題：28px，上 18px，下 28px */
+.title {
+  margin-top: 18px;
+  margin-bottom: 28px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* 日期輸入欄 = 按鈕同寬、同高度 */
+.input-date {
+  width: 100%;
+  height: 48px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  box-sizing: border-box;   /* 🔥 確保寬度和按鈕完全一致 */
+}
+
+
+/* 按鈕 */
+.btn {
+  width: 100%;
+  height: 48px;
+  padding: 0;
+  font-size: 18px;
+  background: #FAAB4E;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* 按下去的瞬間變深色 */
+.btn:active {
+  background: #f3913e;
+  color: #F5F5F5;
+}
+
+
+/* 提示灰底盒 */
+.hint-box {
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 28px;
+}
+
+/* emoji 24px 並垂直置中 */
+.hint-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.hint-text {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* 結果框：背景、邊框、圓角 */
+.result-box {
+  background: #FFE4BB;
+  border: 1px solid #FAAB4E;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* 結果中的數字：紅色、粗體、大小 18px */
+.result-number {
+  color: red;
+  font-size: 18px;
+  font-weight: 700;
+}

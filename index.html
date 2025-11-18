@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>妙麗歲數計算機</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <img src="img/corgi.png" alt="corgi" class="corgi-img">
+
+      <h1 class="title">🐶 妙麗歲數計算機</h1>
+
+      <label for="birthday" class="label">妙麗的出生日期：</label>
+      <input type="date" id="birthday" class="input-date">
+
+      <button id="calcBtn" class="btn">開始計算</button>
+
+      <div class="hint-box">
+        <span class="hint-icon">💡</span>
+        <p class="hint-text">輸入日期後按下按鈕，再重新整理頁面，生日欄位會自動帶回上次的值。</p>
+      </div>
+
+      <div id="resultBox" class="result-box">
+        請先選擇妙麗的生日，再按下「開始計算」。
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
