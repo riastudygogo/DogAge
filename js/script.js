@@ -32,7 +32,7 @@ document.getElementById("calcBtn").addEventListener("click", function () {
   const humanYears = (dogYears * 6).toFixed(1);
 
   const resultHTML = `
-    妙麗現在大約 <span class="result-number">${dogYears}</span> 歲狗年齡，<br>
+    狗狗現在大約 <span class="result-number">${dogYears}</span> 歲狗年齡，<br>
     換算成人類年齡大約是 <span class="result-number">${humanYears}</span> 歲。
 `;
 
