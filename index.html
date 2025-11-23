@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>狗狗年齡計算機</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  <!--  快捷icon語法開始 -->
-  <link rel="icon" type="image/png" href="./icon.png">
-  <link rel="apple-touch-icon" href="./icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./icon.png">
-  <!--  快捷icon語法結束 -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/icon-192.png">
+
+  <!-- iOS Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icon-192.png">
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
 </head>
+
 <body>
 
   <div class="container">
@@ -38,5 +47,11 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+  </script>
+
 </body>
 </html>
