@@ -21,7 +21,7 @@ document.getElementById("calcBtn").addEventListener("click", function () {
     return;
   }
 
-  // 紀錄生日
+  // 儲存生日
   localStorage.setItem("dogBirthday", birthday);
 
   const birthDate = new Date(birthday);
@@ -29,17 +29,16 @@ document.getElementById("calcBtn").addEventListener("click", function () {
   const diffTime = today - birthDate;
 
   const dogYears = (diffTime / (1000 * 60 * 60 * 24 * 365)).toFixed(1);
-  const humanYears = (dogYears * 6).toFixed(1);
+
+  // ⭐ 使用獸醫換算公式（人類年齡=16 × ln(狗年齡)+31）
+  const humanYears = (16 * Math.log(dogYears) + 31).toFixed(1);
 
   const resultHTML = `
     狗狗現在大約 <span class="result-number">${dogYears}</span> 歲狗年齡，<br>
-    換算成人類年齡大約是 <span class="result-number">${humanYears}</span> 歲。
-`;
+    換算成人類年齡約為 <span class="result-number">${humanYears}</span> 歲（依照獸醫 ln 換算公式）。
+  `;
 
-
-  // 顯示結果
+  // 顯示與儲存結果
   document.getElementById("resultBox").innerHTML = resultHTML;
-
-  // 存入 localStorage
   localStorage.setItem("dogAgeResult", resultHTML);
 });
