@@ -1,7 +1,21 @@
-self.addEventListener("install", () => {
-  console.log("Service Worker installed.");
+self.addEventListener("install", (e) => {
+  e.waitUntil(
+    caches.open("dog-age-cache").then(cache => {
+      return cache.addAll([
+        "./",
+        "./index.html",
+        "./css/style.css",
+        "./js/script.js",
+        "./img/corgi.png",
+        "./manifest.json"
+      ]);
+    })
+  );
+  console.log("SW installed & cached.");
 });
 
-self.addEventListener("activate", () => {
-  console.log("Service Worker activated.");
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    caches.match(e.request).then(res => res || fetch(e.request))
+  );
 });
